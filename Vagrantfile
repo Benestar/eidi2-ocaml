@@ -71,5 +71,5 @@ Vagrant.configure("2") do |config|
   #config.vm.provision "shell", privileged: false, run: 'once', path: "scripts/setup-vim.sh"
   #config.vm.provision "shell", privileged: false, run: 'once', path: "scripts/setup-emacs.sh"
   config.vm.provision "shell", privileged: false, run: 'always', path: "scripts/startup.sh"
-
+  config.vm.provision "shell", privileged: false, run: 'once', path: "scripts/owner-fix.sh"
 end
