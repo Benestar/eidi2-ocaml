@@ -6,12 +6,12 @@ wget https://raw.github.com/ocaml/opam/master/shell/opam_installer.sh -O - | sud
 # Init opam
 opam init -a -y --comp 4.04.2
 
-cat > ~/.bashrc <<EOF
+cat > ~/.bashrc << 'EOF'
 eval `opam config env`
 EOF
 
 # Configure an .ocamlinit
-cat > ~/.ocamlinit <<EOF
+cat > ~/.ocamlinit << 'EOF'
 #use "topfind";;
 #thread;;
 #camlp4o;;
